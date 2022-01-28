@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SnmpSharpNet
 {
-	public class Snmp:UdpTransport
+	public class Snmp : UdpTransport
 	{
 		/// <summary>
 		/// Internal event to send result of the async request to.
@@ -20,8 +20,7 @@ namespace SnmpSharpNet
 		/// <summary>
 		/// Constructor
 		/// </summary>
-		public Snmp()
-			:base()
+		public Snmp(bool useV6) : base(useV6)
 		{
 			_response = null;
 			_target = null;
